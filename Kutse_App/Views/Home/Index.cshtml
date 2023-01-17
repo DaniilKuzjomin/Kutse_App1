@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Tere tulemast peole!";
+}
+
+<div class="jumbotron">
+    <h1> @ViewBag.Greeting , Kallis sõber!</h1>
+</div>
+<br />
+<div>
+    @ViewBag.Message
+    <img src="~/Images/vecherinki-pati.jpg" />
+</div>
+
+<div>
+
+    @Html.ActionLink("Vastan", "Ankeet", "Ankeet", new { @class = "btn btn-primary" })
+
+</div>

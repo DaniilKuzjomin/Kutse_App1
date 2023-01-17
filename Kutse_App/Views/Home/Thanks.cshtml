@@ -1,0 +1,33 @@
+﻿@model Kutse_App.Models.Guest
+
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<div>
+
+    <p>Tänan sind, @Model.Name </p>
+
+</div>
+<div>
+
+    @if (Model.WillAttend == true)
+    {
+        @:Ootame sind kallis sõber!
+        <p>
+            <img src="~/Images/images.jpg" />
+        </p>
+        <br />@Html.ActionLink("Meeldetuletus", "Meeldetuletus", "Index", new { @class = "btn btn-primary" })
+    }
+    else
+    {
+        @: Väga kurb uudis. Näeme hiljem!
+        <p>
+            <img src="~/Images/index.jpg" />
+        </p>
+    }
+    @ViewBag.Message @*ViewBag.Message - отчет об отправке письма с приглашением*@
+
+
+</div>
+
